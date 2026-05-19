@@ -1,0 +1,71 @@
+{
+  "name": "medical-app",
+  "private": true,
+  "version": "1.0.1",
+  "type": "module",
+  "main": "main.cjs",
+  "description": "Medical Store App",
+  "author": "Your Name",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "electron .",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
+    "better-sqlite3": "^11.10.0",
+    "crypto-js": "^4.2.0",
+    "electron-updater": "^6.8.3",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^1.16.0",
+    "node-machine-id": "^1.1.12",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "recharts": "^3.8.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "electron": "^38.8.6",
+    "electron-builder": "^26.8.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.6.0",
+    "terser": "^5.31.0",
+    "vite": "^8.0.12"
+  },
+  "build": {
+    "appId": "com.medical.app",
+    "productName": "Medical Store App",
+    "icon": "assets/icon.ico",
+    "asar": true,
+    "asarUnpack": [
+      "assets/**/*",
+      "node_modules/better-sqlite3/**/*"
+    ],
+    "files": [
+      "build/**/*",
+      "main.cjs",
+      "preload.cjs",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "ganeshkl09",
+      "repo": "medicalpro"
+    },
+    "npmRebuild": true
+  }
+}
