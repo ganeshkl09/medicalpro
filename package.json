@@ -1,11 +1,11 @@
 {
   "name": "medical-app",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "main": "main.cjs",
   "description": "Medical Store App",
-  "author": "DHANVIKA SOLUTION",
+  "author": "Dhanvika Solutions",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -52,7 +52,7 @@
       "node_modules/better-sqlite3/**/*"
     ],
     "files": [
-      "build/**/*",
+      "dist/**/*",
       "main.cjs",
       "preload.cjs",
       "assets/**/*"
